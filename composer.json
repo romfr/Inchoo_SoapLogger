@@ -1,0 +1,15 @@
+{
+    "name": "inchoo/soap-logger",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "description": "Magento extension for logging SOAP V1 and V2 API calls.",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"Marko-M"
+        }
+    ]
+}
+
