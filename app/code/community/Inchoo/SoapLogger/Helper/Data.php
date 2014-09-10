@@ -38,6 +38,12 @@ class Inchoo_SoapLogger_Helper_Data extends Mage_Core_Helper_Abstract
     public function logPostXml()
     {
         if(($postData = file_get_contents('php://input'))) {
+            //Log Request URL
+            $this->logMessage($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+
+            //Log Referrer IP
+            $this->logMessage('Referrer: '.$_SERVER['REMOTE_ADDR']);
+
             // DOMDocument
             $apiDomDocument = new DOMDocument('1.0');
 
