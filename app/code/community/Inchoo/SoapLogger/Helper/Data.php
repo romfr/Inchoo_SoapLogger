@@ -44,21 +44,7 @@ class Inchoo_SoapLogger_Helper_Data extends Mage_Core_Helper_Abstract
             //Log Referrer IP
             $this->logMessage('Referrer: '.$_SERVER['REMOTE_ADDR']);
 
-            // DOMDocument
-            $apiDomDocument = new DOMDocument('1.0');
-
-            // Remove white space
-            $apiDomDocument->preserveWhiteSpace = false;
-
-            // Format output for logging into file
-            $apiDomDocument->formatOutput = true;
-
-            // Load XML
-            $apiDomDocument->loadXML($postData);
-
-            if($apiDomDocument->loadXML($postData)) {
-                $this->logMessage($apiDomDocument->saveXML());
-            }
+            $this->logMessage($postData);
         }
     }
 

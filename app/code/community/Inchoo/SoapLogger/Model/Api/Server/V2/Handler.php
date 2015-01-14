@@ -44,8 +44,7 @@ extends Mage_Api_Model_Server_V2_Handler
      */
     public function call($sessionId, $apiPath, $args = array())
     {
-        Mage::helper('inchoo_soaplogger/v2')
-            ->logPostXml();
+        Mage::helper('inchoo_soaplogger/v2')->logPostXml();
 
         return parent::call($sessionId, $apiPath, $args);
     }
